@@ -26,6 +26,14 @@ class ViewController: UIViewController, CAAnimationDelegate {
     
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        self.view.backgroundColor = .black
+        self.gradient.frame = self.view.frame
+        
+    }
+    
     @objc func handlePanGestureRecognizer(gestureRecognizer: UIPanGestureRecognizer) {
         let velocity = gestureRecognizer.velocity(in: self.view)
         
